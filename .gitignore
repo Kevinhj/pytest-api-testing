@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# the wordpress content and site
+ wp-content/
+
+# The report will change constantly so ignore it for now
+ demo_report.html
+
+# PyCharm temp files
+ .idea/
+
+ # This file has some secrets lets ignore it while create a .env file
+ api_test.py
