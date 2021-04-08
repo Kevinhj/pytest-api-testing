@@ -1,9 +1,11 @@
 
 from wooapitest.src.utilities.genericUtilities import generate_random_email_and_password
+from wooapitest.src.utilities.requestsUtility import RequestUtility
+
 class CustomerHelper(object):
 
     def __init__(self):
-        pass
+        self.requests_utility = RequestUtility()
 
     # **kwargs is used to pass several params
     def create_customer(self, email=None, password=None, **kwargs):
@@ -19,3 +21,5 @@ class CustomerHelper(object):
         payload['email'] = email
         payload['password'] = password
         payload.update(kwargs)
+
+        self.requests_utility.post('customers', payload=payload)
