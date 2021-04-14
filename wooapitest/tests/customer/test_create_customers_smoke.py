@@ -36,3 +36,17 @@ def test_create_customer_only_email_password():
 
     assert id_in_api == id_in_db, f'Create customer response "id" not same as "ID" in database.' \
                                   f'Email: {email}'
+
+@pytest.mark.tcid47
+def test_create_customer_fail_for_existing_email():
+
+    # get existing email from db
+    cust_dao = CustomersDAO()
+    existing_cust = cust_dao.get_random_customer_from_db()
+    existing_email = existing_cust[0]['user_email']
+
+    # call the api
+    cust_obj = CustomerHelper()
+    cust_api_info = cust_obj.create_customer(email=existing_email, password="Password1")
+
+    import pdb; pdb.set_trace()
