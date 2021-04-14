@@ -36,5 +36,3 @@ def test_create_customer_only_email_password():
 
     assert id_in_api == id_in_db, f'Create customer response "id" not same as "ID" in database.' \
                                   f'Email: {email}'
-
-    import pdb; pdb.set_trace()
