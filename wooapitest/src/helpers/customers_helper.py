@@ -1,6 +1,6 @@
-
 from wooapitest.src.utilities.genericUtilities import generate_random_email_and_password
 from wooapitest.src.utilities.requestsUtility import RequestUtility
+
 
 class CustomerHelper(object):
 
@@ -22,4 +22,6 @@ class CustomerHelper(object):
         payload['password'] = password
         payload.update(kwargs)
 
-        self.requests_utility.post('customers', payload=payload)
+        create_user_json = self.requests_utility.post('customers', payload=payload, expected_status_code=201)
+
+        return create_user_json
