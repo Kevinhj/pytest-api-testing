@@ -139,3 +139,7 @@ demo_report.html
 
 # This file has some secrets lets ignore it while create a .env file
 api_test.py
+
+# file with env variables
+env.sh
+env.bat
