@@ -11,3 +11,10 @@ To run test cases by mark
 To run the env file on Windows
 
 `env.bat`
+
+To generate the test run report first install pytest-html
+
+`pip install pytest-html`
+
+Then run the command 
+`pytest -m customers --html reports/customers.html`

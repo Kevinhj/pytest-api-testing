@@ -4,6 +4,7 @@ import pytest
 import logging as logger
 from wooapitest.src.utilities.requestsUtility import RequestUtility
 
+@pytest.mark.customers
 @pytest.mark.tcid30
 def test_get_all_customers():
     req_helper = RequestUtility()
