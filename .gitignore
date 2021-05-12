@@ -143,3 +143,4 @@ api_test.py
 # file with env variables
 env.sh
 env.bat
+reports/
